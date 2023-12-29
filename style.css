@@ -1,0 +1,223 @@
+*{
+    margin :0;
+    padding:0;
+    font-family:sans-serif;
+box-sizing: border-box;
+
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+
+#main{
+     height: 100%;
+     width: 100%;
+   display: flex;
+
+}
+
+#marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: absolute;
+  }
+  
+  #marquee-text {
+    display: flex;
+    animation: marquee 15s linear infinite;
+    opacity: .5;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+
+#lpage{
+    height: 100%;
+    width:35% ;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    
+}
+
+#navl{
+width: 100%;
+padding: 20px 30px;
+display: flex;
+justify-content: space-between;
+
+
+}
+
+#navlr{
+    display: flex;
+}
+#navlr a{
+   margin-right: 20px;
+   font-weight: 700;
+   text-decoration: none;
+   opacity: 0.5;
+   color: black;
+   border-bottom: 2px solid black;
+   height: 20px;
+}
+
+#navlr a:hover{
+ height: 40px;
+ transition: 0.6s;
+ opacity: 1;
+
+}
+
+#lpage #textcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+}
+#textcenter h1{
+
+    font-size: 60px;
+    font-weight: 800;
+    background: yellow;
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    background-clip: text;
+    color: transparent;
+    
+    
+}
+
+#textcenter p{
+
+    font-size: 15px;
+    opacity: 0.3;
+    line-height: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+#textcenter a{
+    text-decoration: none;
+    font-weight: 700;
+    opacity: 0.7;
+    color: black;
+    border-bottom: 2px solid black;
+    height: 20px;
+    
+}
+#textcenter a:hover{
+    opacity:1;
+   height: 40px;
+   transition: 0.5s;
+}
+
+#navlr i{
+    color:darkblue;
+}
+
+
+
+#rpage{
+    height: 100%;
+    width: 65%;
+    background-color: rgb(237, 244, 26);
+}
+
+#rpagetop{
+   display: flex;
+    height: 50%;
+    width: 100%;
+    background-color: aqua;
+}
+
+#rpagebottom{
+    height: 50%;
+    width: 100%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSqOD8IGgJ_3FC3LtlAORKv6aFj-BM5BgdMw&usqp=CAU);
+    background-position:center ;
+    background-size: cover;
+    transition: 0.4s;
+    
+}
+#rpagebottom:hover {
+    transform: scale(0.92); /* Slightly increase the size on hover */
+    
+}
+  
+
+#rpagetopl{
+  
+    height: 100%;
+    width: 50%;
+    background-image: url(https://images.pexels.com/photos/15763953/pexels-photo-15763953/free-photo-of-single-fresh-strawberry.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+}
+
+#rpagetopl:hover {
+    transform: scale(0.92); /* Slightly increase the size on hover */
+    
+}
+#rpagetopr{
+
+    height: 100%;
+    width: 50%;
+    background-image: url(https://images.pexels.com/photos/6156993/pexels-photo-6156993.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+}
+#rpagetopr:hover {
+    transform: scale(0.92); /* Slightly increase the size on hover */
+    
+}
+
+#textcenter h1:hover{
+
+  margin-top: 10px;
+  border-bottom: 3px solid rgb(11, 11, 11);
+text-shadow: 65px -50px 4px black;
+transition: text-shadow 0.5s;
+
+}
+#textcenter p:hover{
+    line-height: 20px;
+    opacity: 1.0;
+    transition: line-height 0.3s;
+    font-weight: 700;
+    
+}
+    
+@media (max-width: 500px){
+   #main{
+    flex-direction: column;
+   }  
+  #main #lpage{
+    width: 100%;
+  }
+
+  #main #rpage{
+    width:100%
+  }
+
+
+}
